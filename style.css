@@ -1,0 +1,91 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: sans-serif;
+  font-weight: 100;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  background-color: #c623df;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#calculadora {
+  display: flex;
+  max-width: 320px;
+  width: 100%;
+  flex-direction: column;
+  background-color: rgb(29, 29, 30);
+  padding: 3rem 0 0.5rem;
+  font-size: 5rem;
+  filter: drop-shadow(5px 5px 20px rgba(0, 0, 0, 0.749));
+  border-radius: 12px;
+}
+
+#outputs {
+  align-self: flex-end;
+  padding: 0 0.1em 0 0;
+}
+
+#inputs {
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: center;
+  gap: 3px;
+}
+
+#inputs > div {
+  text-align: center;
+  font-size: 1.8rem;
+  background-color: #393838;
+  border-radius: 4px;
+  padding: 12px 0;
+  box-shadow: 1px 0.5px 1px rgb(36, 36, 36);
+  flex: 0 0 calc(300px / 4);
+  cursor: pointer;
+}
+
+#inputs > .operators {
+  background-color: rgb(47, 47, 48);
+}
+
+#inputs > div:hover {
+  background-color: rgb(47, 47, 48);
+}
+
+#inputs > div:active {
+  background-color: rgb(39, 39, 40);
+}
+
+#inputs > .operators:hover {
+  background-color: #393838;
+}
+
+#inputs > .operators:active {
+  background-color: rgb(47, 47, 48);
+}
+
+#inputs > #submit {
+  background-color: rgb(235, 150, 235);
+  color: #000;
+}
+
+#inputs > #submit:hover {
+  background-color: rgba(235, 150, 235, 0.874);
+}
+
+#inputs > #submit:active {
+  background-color: rgba(193, 123, 193, 0.874);
+}
