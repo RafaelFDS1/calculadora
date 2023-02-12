@@ -36,7 +36,9 @@ body {
 
 #outputs {
   align-self: flex-end;
-  padding: 0 0.1em 0 0;
+  padding: 0 0.3em 0;
+  max-width: 100%;
+  overflow-x: scroll;
 }
 
 #inputs {
