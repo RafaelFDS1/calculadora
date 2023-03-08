@@ -34,5 +34,6 @@ btnSubmit.addEventListener("click", (e) => {
     }
   });
   numbers.push(parseInt(arrayNums.join("")));
+  console.log(operators)
   console.log(numbers);
 });
