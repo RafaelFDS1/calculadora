@@ -36,7 +36,9 @@ body {
 
 #outputs {
   align-self: flex-end;
-  padding: 0 0.1em 0 0;
+  padding: 0 0.3em 0;
+  max-width: 100%;
+  overflow-x: scroll;
 }
 
 #inputs {
@@ -61,6 +63,10 @@ body {
   background-color: rgb(47, 47, 48);
 }
 
+#inputs > .functions {
+  background-color: rgb(47, 47, 48);
+}
+
 #inputs > div:hover {
   background-color: rgb(47, 47, 48);
 }
@@ -76,6 +82,15 @@ body {
 #inputs > .operators:active {
   background-color: rgb(47, 47, 48);
 }
+
+#inputs > .functions:hover {
+  background-color: #393838;
+}
+
+#inputs > .functions:active {
+  background-color: rgb(47, 47, 48);
+}
+
 
 #inputs > #submit {
   background-color: rgb(235, 150, 235);
