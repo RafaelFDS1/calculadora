@@ -23,7 +23,7 @@ btnSubmit.addEventListener("click", (e) => {
   let arrayNums = [];
   let numbers = [];
   let operators = [];
-  let arrayFinal = [];
+  let output = document.querySelector("#outputs");
   arrayEq.forEach((e) => {
     if (op.includes(e)) {
       operators.push(e == "x" ? "*" : e);
@@ -34,6 +34,27 @@ btnSubmit.addEventListener("click", (e) => {
     }
   });
   numbers.push(parseInt(arrayNums.join("")));
-  console.log(operators)
-  console.log(numbers);
+  output.innerText = calcular(numbers, operators);
 });
+
+function calcular(numbers, operators) {
+  operators.forEach((e, i) => {
+    if (e == "/" || e == "*") {
+      let temp = numbers[i];
+      numbers.pop(numbers.indexOf(temp));
+      numbers.unshift(temp);
+      temp = numbers[i + 1];
+      numbers.pop(numbers.indexOf(temp));
+      numbers.unshift(temp);
+    }
+  });
+  let result = numbers[0];
+  operators.forEach((e, i) => {
+    switch (e) {
+      case "/":
+        result = result / numbers[i + 1];
+        break;
+    }
+  });
+  return result;
+}
